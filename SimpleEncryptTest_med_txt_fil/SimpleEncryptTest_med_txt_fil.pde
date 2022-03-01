@@ -6,7 +6,7 @@ for (int i = 0; i < b.length; i++) {
   String s = " " + a + " |";
   print(s);
   nums += s.length();
-  a -= 300;
+  a += 300;
   b[i] = (byte)a;
 }
 
