@@ -1,3 +1,4 @@
-void startFunktion() {
+boolean startFunktion() {
+  
   
 }
