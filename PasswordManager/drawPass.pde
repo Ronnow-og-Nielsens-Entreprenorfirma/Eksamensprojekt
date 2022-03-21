@@ -1,17 +1,23 @@
 void drawPass() {
-  fill(255);
-  rect(200,200, 200, 200);
+  String print = "";
+  for (int i = 0; i < users.size(); i++) {
+    user = users.getJSONObject(i);
+    String text = user.getString("place");
+    text = deCode(text);
+    print += text;
+    
+    text = user.getString("name");
+    text = " Username: " + deCode(text);
+    print += text;
+    
+    text = user.getString("passWord");
+    text = " Password: " + deCode(text);
+    print += text;
   
-  String text;
+  text(print, x, y);
   
-  
-  deCode(text);
-  
-  myLabel = P5.addTextlabel("label")
-               .setText("hej")
-               .setPosition(100,50)
-               .setColorValue(255)
-               .setFont(createFont("arial",20))
-               ;
-  
+  y += 50;
+  print = "";
+  }
+  drawn = true;
 }
