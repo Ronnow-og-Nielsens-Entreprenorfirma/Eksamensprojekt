@@ -1,3 +1,6 @@
+
+// Dekryptere passwordsne.
+
 String deCode(String input) {
   String res = input;
   Byte[] data = new Byte[input.length()];

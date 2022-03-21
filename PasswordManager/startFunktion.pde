@@ -1,3 +1,6 @@
+
+// Laver skærm med Input for dekrypterings password.
+
 void startFunktion() {
    println("inputBox");
    PFont font = createFont("arial",20);
@@ -9,10 +12,6 @@ void startFunktion() {
      .setSize(100,40)
      .setFocus(true)
      .setColor(color(255))
-     .setLabel("p")
+     .setLabel("Password")
      ;
-
-  if (input != null){
-    print(input);
-  }
 }

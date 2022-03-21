@@ -1,3 +1,6 @@
+
+// Skriver passwordsne ud på skærmen.
+
 void drawPass() {
   String print = "";
   for (int i = 0; i < users.size(); i++) {
