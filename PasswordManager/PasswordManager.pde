@@ -22,7 +22,6 @@ JSONObject user;
 // DIverse globale variabler
 String input;
 float x = 200, y = 200;
-boolean drawn = false;
 
 void setup() {
   // Loader data fra JSON fil
@@ -42,7 +41,7 @@ void setup() {
 void draw() {
   
   // Dekryptering af passwords og tegner dem på skærmen.
-  if (input != null && !drawn){
+  if (input != null){
     I.hide();
     background(0);
     drawPass();

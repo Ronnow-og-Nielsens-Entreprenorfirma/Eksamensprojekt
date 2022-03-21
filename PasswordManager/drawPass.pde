@@ -22,5 +22,4 @@ void drawPass() {
   y += 50;
   print = "";
   }
-  drawn = true;
 }
