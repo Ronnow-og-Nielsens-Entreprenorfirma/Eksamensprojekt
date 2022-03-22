@@ -1,20 +1,14 @@
 [
-    {
-        "id": 0,
-        "place": "gmail.com",
-        "name": "Kris9630",
-        "passWord": "1234"
-    },
-    {
-        "id": 1,
-        "place": "yahoo.com",
-        "name": "Jeppe9630",
-        "passWord": "4321"
-    },
-    {
-        "id": 2,
-        "place": "Steam",
-        "name": "Kris_Steam",
-        "passWord": "0000"
-    }
+  {
+    "passWord": "1234",
+    "name": "Kris9630",
+    "id": 0,
+    "place": "gmail.com"
+  },
+  {
+    "passWord": "4321",
+    "name": "Jeppe9630",
+    "id": 1,
+    "place": "yahoo.com"
+  }
 ]

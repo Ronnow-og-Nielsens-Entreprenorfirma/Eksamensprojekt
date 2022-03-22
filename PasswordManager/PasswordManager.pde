@@ -12,7 +12,8 @@
 import controlP5.*;
 ControlP5 P5;
 
-controlP5.Textfield I;
+controlP5.Textfield Input;
+controlP5.Button Newpass;
 Textlabel myLabel;
 
 // Initiere JSON
@@ -20,8 +21,13 @@ JSONArray users;
 JSONObject user;
 
 // DIverse globale variabler
+String decoder;
 String input;
+String[] inputs = new String[3];
+boolean boInput = false;
 float x = 200, y = 200;
+String temp;
+int n = 0;
 
 void setup() {
   // Loader data fra JSON fil
@@ -41,11 +47,29 @@ void setup() {
 void draw() {
   
   // Dekryptering af passwords og tegner dem på skærmen.
-  if (input != null){
-    I.hide();
+  if (input != null && decoder == null) decoder = input;
+  if (decoder != null){
+    Input.hide();
+    Newpass.show();
     background(0);
     drawPass();
     y = 200;
+  }
+  
+  // Indtast nyt password
+  if (boInput) {
+    newJSONObject();
+  }
+  
+  
+  
+}
+
+public void controlEvent(ControlEvent theEvent) {
+  if (theEvent.getName() == "newPass") {
+    temp = input;
+    n = 0;
+    boInput = true;
   }
 }
 
