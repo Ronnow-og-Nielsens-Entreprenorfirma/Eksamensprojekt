@@ -1,7 +1,7 @@
 
 // Skriver passwordsne ud på skærmen.
 
-void drawPass() {
+void drawPass() { 
   String print = "";
   for (int i = 0; i < users.size(); i++) {
     user = users.getJSONObject(i);
@@ -17,6 +17,7 @@ void drawPass() {
     text = " Password: " + deCode(text);
     print += text;
   
+  textFont(createFont("arial",20));
   text(print, x, y);
   
   y += 50;

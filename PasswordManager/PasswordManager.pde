@@ -14,7 +14,9 @@ ControlP5 P5;
 
 controlP5.Textfield Input;
 controlP5.Button Newpass;
+controlP5.Textlabel Header;
 Textlabel myLabel;
+controlP5.Button Logout;
 
 // Initiere JSON
 JSONArray users;
@@ -50,7 +52,9 @@ void draw() {
   if (input != null && decoder == null) decoder = input;
   if (decoder != null){
     Input.hide();
+    Header.hide();
     Newpass.show();
+    Logout.show();
     background(0);
     drawPass();
     y = 200;
@@ -76,4 +80,12 @@ public void controlEvent(ControlEvent theEvent) {
 // Input void
 public void Password(String theText) {
   input = theText;
+}
+
+void reset(){
+  input = null;
+  Input.show();
+  Header.show();
+  Newpass.hide();
+  Logout.hide();
 }
