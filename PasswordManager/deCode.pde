@@ -2,6 +2,7 @@
 // Dekryptere passwordsne.
 
 String deCode(String decode) {
+  println("Starter decode");
   byte[] data = new byte[decode.length()];
   for (int i = 0; i < data.length; i++) {
     data[i] = (byte)decode.charAt(i);
@@ -11,6 +12,8 @@ String deCode(String decode) {
     int temp = data[i] & 0xff;
     temp = temp - (int)decoder.charAt(g);
     data[i] = (byte)temp;
+    println(data[i]);
+    g++;
     if (g == decoder.length()) g = 0;
   }
   decode = "";
