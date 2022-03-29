@@ -2,7 +2,6 @@
 // Laver skærm med Input for dekrypterings password.
 
 void startFunktion() {
-   println("inputBox");
    PFont font = createFont("arial",35);
    
    Input = P5.addTextfield("Password")

@@ -7,7 +7,6 @@ void newJSONObject() {
 
   if (input != temp) {
     inputs[n] = input;
-    print(n + " : " + inputs[n]);
     n++;
     input = temp;
     if (n < 3) {
