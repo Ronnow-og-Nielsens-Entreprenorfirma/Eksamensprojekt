@@ -49,7 +49,7 @@ void setup() {
 void draw() {
   
   // Dekryptering af passwords og tegner dem på skærmen.
-  if (input != null && decoder == null) decoder = input;
+  if (input != null && decoder == null) { decoder = input; println(decoder); }
   if (decoder != null){
     Input.hide();
     Header.hide();

@@ -16,7 +16,7 @@ void newJSONObject() {
   }
 
   if (n > 2) {
-    inputs = enCode(inputNames);
+    enCode();
     user = new JSONObject();
 
     user.setInt("id", users.size());
