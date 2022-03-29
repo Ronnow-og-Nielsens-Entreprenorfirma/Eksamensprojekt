@@ -40,7 +40,7 @@ void setup() {
   
   // Diverse funktioner for elve vinduet.
   size(800, 800);
-  background(0);
+  background(30);
   
   // Starter password skærm
   startFunktion();
@@ -55,7 +55,7 @@ void draw() {
     Header.hide();
     Newpass.show();
     Logout.show();
-    background(0);
+    background(20);
     drawPass();
     y = 200;
   }
@@ -63,6 +63,7 @@ void draw() {
   // Indtast nyt password
   if (boInput) {
     newJSONObject();
+    Logout.hide();
   }
   
   
@@ -86,7 +87,7 @@ public void Password(String theText) {
 }
 
 void reset(){
-  background(0);
+  background(30);
   input = null;
   decoder = null;
   Input.show();
