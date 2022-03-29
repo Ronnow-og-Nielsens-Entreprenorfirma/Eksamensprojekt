@@ -30,6 +30,7 @@ void newJSONObject() {
     Input.hide();
     Newpass.show();
     boInput = false;
+    Logout.show();
     n = 0;
   }
   
