@@ -75,6 +75,9 @@ public void controlEvent(ControlEvent theEvent) {
     n = 0;
     boInput = true;
   }
+  if (theEvent.getName() == "logout") {
+    reset();
+  }
 }
 
 // Input void
@@ -83,7 +86,9 @@ public void Password(String theText) {
 }
 
 void reset(){
+  background(0);
   input = null;
+  decoder = null;
   Input.show();
   Header.show();
   Newpass.hide();
