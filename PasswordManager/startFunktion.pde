@@ -13,6 +13,7 @@ void startFunktion() {
      .setFocus(true)
      .setColor(color(255))
      .setLabel("")
+     .setPasswordMode(true)
      ;
     
    Header = P5.addTextlabel("header")  
