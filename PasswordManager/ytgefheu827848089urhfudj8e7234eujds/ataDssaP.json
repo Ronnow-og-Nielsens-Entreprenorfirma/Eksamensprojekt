@@ -1,36 +1,6 @@
-[
-<<<<<<< HEAD
-  {
-    "passWord": "1234",
-    "name": "Kris9630",
-    "id": 0,
-    "place": "gmail.com"
-  },
-  {
-    "passWord": "4321",
-    "name": "Jeppe9630",
-    "id": 1,
-    "place": "yahoo.com"
-  },
-  {
-    "passWord": "asd",
-    "name": "asd",
-    "id": 2,
-    "place": "sdasd"
-  },
-  {
-    "passWord": "asd",
-    "name": "sad",
-    "id": 3,
-    "place": "asda"
-  },
-  {
-    "passWord": "hej",
-    "name": "hej",
-    "id": 4,
-    "place": "hej"
-  }
-=======
-  
->>>>>>> d6ae35e2ea9cf07392e2a77858be416b36c16f69
-]
+[{
+  "passWord": "Enter passwordﾯﾲLﾜ\u0016￠ﾐ￬y￝ﾙￔ\u0016\\",
+  "name": "Enter usernameﾯﾲLﾜ\u0016￠ﾻﾄ\u000fnﾲ￬'ￋ",
+  "id": 0,
+  "place": "Enter placeﾯﾲLﾜ\u0016￠ﾐﾐﾃ￭ￋ"
+}]
