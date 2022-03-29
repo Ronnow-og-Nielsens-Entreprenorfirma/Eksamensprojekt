@@ -11,4 +11,17 @@
     "id": 1,
     "place": "yahoo.com"
   },
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+  {"id": 2},
+  {
+    "passWord": "Enter password￴ﾲﾬtn￠￀\u000fE￬ﾙﾩﾈ\\",
+    "name": "Enter username￴ﾲﾬtn￠ﾴ￝ﾣﾈﾲ\u0007ﾔￋ",
+    "id": 3,
+    "place": "Enter place￴ﾲﾬtn￠￀ￔ\u0007ﾬￋ"
+  }
+=======
+>>>>>>> df19989afc371fe88f329fda735ef68427939e4f
+>>>>>>> Stashed changes
 ]

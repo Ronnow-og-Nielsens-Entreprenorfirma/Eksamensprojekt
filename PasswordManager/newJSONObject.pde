@@ -16,7 +16,7 @@ void newJSONObject() {
   }
   
   if (n > 2) {
-    inputNames = enCode(inputNames);
+    inputs = enCode(inputNames);
     user = new JSONObject();
   
     user.setInt("id", users.size());
@@ -30,7 +30,15 @@ void newJSONObject() {
     Input.hide();
     Newpass.show();
     boInput = false;
+<<<<<<< Updated upstream
     Logout.show();
+=======
+<<<<<<< HEAD
+    inputs = new String[3];
+=======
+    Logout.show();
+>>>>>>> df19989afc371fe88f329fda735ef68427939e4f
+>>>>>>> Stashed changes
     n = 0;
   }
   
