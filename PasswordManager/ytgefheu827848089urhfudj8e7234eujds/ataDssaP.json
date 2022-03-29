@@ -11,4 +11,22 @@
     "id": 1,
     "place": "yahoo.com"
   },
+  {
+    "passWord": "asd",
+    "name": "asd",
+    "id": 2,
+    "place": "sdasd"
+  },
+  {
+    "passWord": "asd",
+    "name": "sad",
+    "id": 3,
+    "place": "asda"
+  },
+  {
+    "passWord": "hej",
+    "name": "hej",
+    "id": 4,
+    "place": "hej"
+  }
 ]

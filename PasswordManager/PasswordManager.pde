@@ -58,6 +58,7 @@ void draw() {
     background(20);
     drawPass();
     y = 200;
+    Input.setPasswordMode(false);
   }
   
   // Indtast nyt password
@@ -94,4 +95,6 @@ void reset(){
   Header.show();
   Newpass.hide();
   Logout.hide();
+  Input.setPasswordMode(true);
+  Input.setLabel("");
 }
