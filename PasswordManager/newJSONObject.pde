@@ -1,16 +1,18 @@
 void newJSONObject() {
   String[] inputNames = {"Enter place", "Enter username", "Enter password"};
   Newpass.hide();
-  Input.setLabel(inputNames[n]);
   Input.show();
+  Header.show();
   Input.setFocus(true);
+  Header.setText(inputNames[n]);
+  Header.setPosition(width/2-175, height/10);
 
   if (input != temp) {
     inputs[n] = input;
     n++;
     input = temp;
     if (n < 3) {
-      Input.setLabel(inputNames[n]);
+      Header.setText(inputNames[n]);
     }
   }
 
