@@ -93,6 +93,10 @@ public void controlEvent(ControlEvent theEvent) {
   }
   if (theEvent.getName().substring(0, 4).equals("user") || theEvent.getName().substring(0, 4).equals("pass")) {
     copyPaste(theEvent.getName());
+    
+  }
+  if (theEvent.getName().substring(0, 4).equals("slet")) {
+    sletData();
   }
 }
 
