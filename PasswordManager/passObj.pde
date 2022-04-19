@@ -9,15 +9,24 @@ class passObj{
     user = User;
     pass = Pass;
     
+  }
+  
+ 
+  
+  void show(float y, int i){
     PFont font = createFont("arial", 15);   
     
+    textAlign(CENTER);
+    textFont(font);
+    println(place+ " " + user + " " + pass);
+    text(place+ " " + user + " " + pass,200,y);
     
     P5.addButton("user"+i)
-    .setPosition(width-100, 0)
+    .setPosition(width-200, 0)
     .setFont(font)
     .setSize(100, 40)
     .setLabel("Copy username")
-    .show()
+    .hide()
     .setColorBackground(color(100,0,0))
     .setColorForeground(color(50,0,0)) 
     ;
@@ -27,7 +36,7 @@ class passObj{
     .setFont(font)
     .setSize(100, 40)
     .setLabel("Copy password")
-    .show()
+    .hide()
     .setColorBackground(color(100,0,0))
     .setColorForeground(color(50,0,0)) 
     ;
@@ -37,16 +46,10 @@ class passObj{
     .setFont(font)
     .setSize(100, 40)
     .setLabel("Delete password")
-    .show()
+    .hide()
     .setColorBackground(color(100,0,0))
     .setColorForeground(color(50,0,0)) 
     ;
-  }
-  
- 
-  
-  void show(){
-    
   }
   
   String getUser(){

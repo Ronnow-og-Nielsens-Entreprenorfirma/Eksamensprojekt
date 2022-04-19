@@ -2,25 +2,19 @@
 // Skriver passwordsne ud på skærmen.
 
 void drawPass() { 
-  String print = "";
-  for (int i = 0; i < users.size(); i++) {
+  for (int i=0; i<users.size(); i++) {
+    userData = (passObj[]) expand(userData, userData.length + 1);
+
     user = users.getJSONObject(i);
-    String text = user.getString("place");
-    text = deCode(text);
-    print += text;
     
-    text = user.getString("name");
-    text = " Username: " + deCode(text);
-    print += text;
-    
-    text = user.getString("passWord");
-    text = " Password: " + deCode(text);
-    print += text;
-  
-  textFont(createFont("arial",20));
-  text(print, x, y);
-  
-  y += 50;
-  print = "";
+    String place = deCode(user.getString("place"));
+
+    String username = deCode(user.getString("name"));
+
+    String password = deCode(user.getString("passWord"));
+
+    userData[userData.length-1] = new passObj(place, username, password);
+
+    userData[userData.length-1].show(y, userData.length-1);
   }
 }

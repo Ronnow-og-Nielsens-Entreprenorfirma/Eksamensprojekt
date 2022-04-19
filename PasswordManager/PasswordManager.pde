@@ -37,7 +37,7 @@ String decoder;
 String input;
 String[] inputs = new String[3];
 boolean boInput = false;
-float x = 200, y = 200;
+float y = 200;
 String temp;
 int n = 0;
 
@@ -45,19 +45,7 @@ void setup() {
   // Loader data fra JSON fil
   users = loadJSONArray("ytgefheu827848089urhfudj8e7234eujds/ataDssaP.json");
   
-  for (int i=0;i<users.size();i++){
-    userData = (passObj[]) expand(userData, userData.length + 1);
-    
-    user = users.getJSONObject(i);
-    String place = deCode(user.getString("place"));
-    
-    String username = deCode(user.getString("place"));
-    
-    String password = deCode(user.getString("place"));
-    
-    userData[userData.length-1] = new passObj(place, username, password);
-    
-  }
+  
   // Starter ControlP5
   P5 = new ControlP5(this);
   
