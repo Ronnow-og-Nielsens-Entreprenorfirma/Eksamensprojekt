@@ -29,7 +29,10 @@ controlP5.Button Logout;
 JSONArray users;
 JSONObject user;
 
-// DIverse globale variabler
+// Initiere objekt array til user data
+passObj[] userData = new passObj[0];
+
+// Diverse globale variabler
 String decoder;
 String input;
 String[] inputs = new String[3];
@@ -41,7 +44,7 @@ int n = 0;
 void setup() {
   // Loader data fra JSON fil
   users = loadJSONArray("ytgefheu827848089urhfudj8e7234eujds/ataDssaP.json");
-  passObj[] userData = new passObj[0];
+  
   for (int i=0;i<users.size();i++){
     userData = (passObj[]) expand(userData, userData.length + 1);
     
@@ -52,9 +55,7 @@ void setup() {
     
     String password = deCode(user.getString("place"));
     
-    
-    
-    
+    userData[userData.length-1] = new passObj(place, username, password);
     
   }
   // Starter ControlP5

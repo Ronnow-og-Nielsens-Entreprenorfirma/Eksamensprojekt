@@ -1,6 +1,6 @@
 void copyPaste(String dataNumber) {
   int number = int(dataNumber.substring(4));
-  String copy;
+  String copy = "";
   if (dataNumber.substring(0, 4).equals("user")) {
     copy = userData[number].getUser();
   }
