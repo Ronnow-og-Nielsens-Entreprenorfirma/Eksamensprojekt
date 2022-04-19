@@ -41,7 +41,22 @@ int n = 0;
 void setup() {
   // Loader data fra JSON fil
   users = loadJSONArray("ytgefheu827848089urhfudj8e7234eujds/ataDssaP.json");
-  
+  passObj[] userData = new passObj[0];
+  for (int i=0;i<users.size();i++){
+    userData = (passObj[]) expand(userData, userData.length + 1);
+    
+    user = users.getJSONObject(i);
+    String place = deCode(user.getString("place"));
+    
+    String username = deCode(user.getString("place"));
+    
+    String password = deCode(user.getString("place"));
+    
+    
+    
+    
+    
+  }
   // Starter ControlP5
   P5 = new ControlP5(this);
   
