@@ -1,6 +1,14 @@
 class passObj{
   
-  passObj(String place, String user, String pass){
+  String place;
+  String user;
+  String pass;
+  
+  passObj(String Place, String User, String Pass){
+    place = Place;
+    user = User;
+    pass = Pass;
+    
     PFont font = createFont("arial", 15);   
     
     
@@ -41,7 +49,15 @@ class passObj{
     
   }
   
+  String getUser(){
+    
+    return user;
+  }
   
+   String getPass(){
+    
+    return pass;
+  }
   
 
 }
