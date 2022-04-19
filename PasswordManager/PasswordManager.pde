@@ -8,6 +8,13 @@
 */
 
 
+// importere biblioteker til at kunne kopiere ting.
+import java.awt.*;
+import java.awt.event.*;
+import java.awt.datatransfer.*;
+import javax.swing.*;
+import java.io.*;
+
 // impotere og definere ControlP5 bibilotek
 import controlP5.*;
 ControlP5 P5;
@@ -79,6 +86,9 @@ public void controlEvent(ControlEvent theEvent) {
   }
   if (theEvent.getName() == "logout") {
     reset();
+  }
+  if (theEvent.getName().substring(0, 4).equals("user") || theEvent.getName().substring(0, 4).equals("pass")) {
+    copyPaste(theEvent.getName());
   }
 }
 
