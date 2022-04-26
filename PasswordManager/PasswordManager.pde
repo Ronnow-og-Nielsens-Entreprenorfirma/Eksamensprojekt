@@ -1,11 +1,11 @@
 /*
   Password manager, med kryptering af passwords.
-  
-  Dette program er til at opbevare og holde styr på sine passwords.
-  Passwordsne bliver opbevaret i en JSON fil, hvor de er krypteret.
-  
-  Udviklet af Jeppe Rønnow og Kristoffer Nielsen.
-*/
+ 
+ Dette program er til at opbevare og holde styr på sine passwords.
+ Passwordsne bliver opbevaret i en JSON fil, hvor de er krypteret.
+ 
+ Udviklet af Jeppe Rønnow og Kristoffer Nielsen.
+ */
 
 
 // importere biblioteker til at kunne kopiere ting.
@@ -30,7 +30,7 @@ JSONArray users;
 JSONObject user;
 
 // Initiere objekt array til user data
-passObj[] userData = new passObj[0];
+ArrayList<passObj> userData = new ArrayList<passObj>();
 
 // Diverse globale variabler
 String decoder;
@@ -44,24 +44,35 @@ int n = 0;
 void setup() {
   // Loader data fra JSON fil
   users = loadJSONArray("ytgefheu827848089urhfudj8e7234eujds/ataDssaP.json");
-  
-  
+
   // Starter ControlP5
   P5 = new ControlP5(this);
-  
+
   // Diverse funktioner for elve vinduet.
   size(800, 800);
   background(30);
-  
+
   // Starter password skærm
   startFunktion();
 }
 
 void draw() {
-  
+
   // Dekryptering af passwords og tegner dem på skærmen.
-  if (input != null && decoder == null) decoder = input;
-  if (decoder != null){
+  if (input != null && decoder == null) {
+    decoder = input;
+    float y = 150;
+    for (int i = 0; i < users.size(); i++) {
+      y += 50;
+      user = users.getJSONObject(i);
+      String p = deCode(user.getString("place"));
+      String u = deCode(user.getString("name"));
+      String k = deCode(user.getString("passWord"));
+      userData.add(new passObj(p, u, k, y));
+    }
+  }
+  if (decoder != null) {
+
     Input.hide();
     Header.hide();
     Newpass.show();
@@ -71,15 +82,12 @@ void draw() {
     y = 200;
     Input.setPasswordMode(false);
   }
-  
+
   // Indtast nyt password
   if (boInput) {
     newJSONObject();
     Logout.hide();
   }
-  
-  
-  
 }
 
 public void controlEvent(ControlEvent theEvent) {
@@ -93,7 +101,6 @@ public void controlEvent(ControlEvent theEvent) {
   }
   if (theEvent.getName().substring(0, 4).equals("user") || theEvent.getName().substring(0, 4).equals("pass")) {
     copyPaste(theEvent.getName());
-    
   }
   if (theEvent.getName().substring(0, 4).equals("slet")) {
     sletData();
@@ -105,7 +112,7 @@ public void Password(String theText) {
   input = theText;
 }
 
-void reset(){
+void reset() {
   background(30);
   input = null;
   decoder = null;

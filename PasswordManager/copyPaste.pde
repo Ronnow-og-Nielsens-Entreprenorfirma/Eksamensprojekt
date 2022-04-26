@@ -2,10 +2,12 @@ void copyPaste(String dataNumber) {
   int number = int(dataNumber.substring(4));
   String copy = "";
   if (dataNumber.substring(0, 4).equals("user")) {
-    copy = userData[number].getUser();
+    passObj user = userData.get(number);
+    copy = user.getUser();
   }
   if (dataNumber.substring(0, 4).equals("pass")) {
-    copy = userData[number].getPass();
+    passObj user = userData.get(number);
+    copy = user.getPass();
   }
   
   StringSelection data = new StringSelection(copy);

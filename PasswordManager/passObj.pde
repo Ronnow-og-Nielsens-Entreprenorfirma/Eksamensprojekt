@@ -3,53 +3,27 @@ class passObj{
   String place;
   String user;
   String pass;
+  int x = 100;
+  float y;
   
-  passObj(String Place, String User, String Pass){
+  
+  passObj(String Place, String User, String Pass, float yCord){
     place = Place;
     user = User;
     pass = Pass;
-    
+    y = yCord;
   }
   
  
   
-  void show(float y, int i){
-    PFont font = createFont("arial", 15);   
+  void show(){  
     
-    textAlign(CENTER);
-    textFont(font);
-    println(place+ " " + user + " " + pass);
-    text(place+ " " + user + " " + pass,200,y);
+    rect(x+200, y, 200, 100);
+    rect(x+400, y, 200, 100);
+    rect(x+600, y, 200, 100);
+    text(place + " " + user + "     Copy          " + pass + "       Copy        Delete ", x, y);
     
-    P5.addButton("user"+i)
-    .setPosition(width-200, 0)
-    .setFont(font)
-    .setSize(100, 40)
-    .setLabel("Copy username")
-    .hide()
-    .setColorBackground(color(100,0,0))
-    .setColorForeground(color(50,0,0)) 
-    ;
     
-    P5.addButton("pass"+i)
-    .setPosition(width-100, 0)
-    .setFont(font)
-    .setSize(100, 40)
-    .setLabel("Copy password")
-    .hide()
-    .setColorBackground(color(100,0,0))
-    .setColorForeground(color(50,0,0)) 
-    ;
-    
-    P5.addButton("slet"+i)
-    .setPosition(width-100, 0)
-    .setFont(font)
-    .setSize(100, 40)
-    .setLabel("Delete password")
-    .hide()
-    .setColorBackground(color(100,0,0))
-    .setColorForeground(color(50,0,0)) 
-    ;
   }
   
   String getUser(){
@@ -62,5 +36,9 @@ class passObj{
     return pass;
   }
   
+  float getYCord() {
+    
+    return y;
+  }
 
 }

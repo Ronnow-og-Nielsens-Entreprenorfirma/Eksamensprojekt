@@ -20,13 +20,20 @@ void newJSONObject() {
     enCode();
     user = new JSONObject();
 
-    user.setInt("id", users.size());
     user.setString("place", inputs[0]);
     user.setString("name", inputs[1]);
     user.setString("passWord", inputs[2]);
 
     users.setJSONObject(users.size(), user);
     saveJSONArray(users, "ytgefheu827848089urhfudj8e7234eujds/ataDssaP.json");
+    
+    String p = deCode(inputs[0]);
+    String u = deCode(inputs[1]);
+    String k = deCode(inputs[2]);
+    passObj cord = userData.get(userData.size()-1);
+    float y = cord.getYCord();
+    y += 50;
+    userData.add(new passObj(p, u, k, y));
 
     Input.hide();
     Newpass.show();
