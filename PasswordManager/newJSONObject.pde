@@ -1,5 +1,6 @@
 void newJSONObject() {
   String[] inputNames = {"Enter place", "Enter username", "Enter password"};
+  background(0);
   Newpass.hide();
   Input.show();
   Header.show();
@@ -26,12 +27,16 @@ void newJSONObject() {
 
     users.setJSONObject(users.size(), user);
     saveJSONArray(users, "ytgefheu827848089urhfudj8e7234eujds/ataDssaP.json");
-    
+
     String p = deCode(inputs[0]);
     String u = deCode(inputs[1]);
     String k = deCode(inputs[2]);
-    passObj cord = userData.get(userData.size()-1);
-    float y = cord.getYCord();
+    float y = 0;
+    if (userData.size() == 0) y = 150;
+    else if (userData.size() > 0) {
+      passObj cord = userData.get(userData.size()-1);
+      y = cord.getYCord();
+    }
     y += 50;
     userData.add(new passObj(p, u, k, y));
 

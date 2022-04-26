@@ -40,6 +40,7 @@ boolean boInput = false;
 float y = 200;
 String temp;
 int n = 0;
+//boolean newPass = false;
 
 void setup() {
   // Loader data fra JSON fil
@@ -72,7 +73,6 @@ void draw() {
     }
   }
   if (decoder != null) {
-
     Input.hide();
     Header.hide();
     Newpass.show();
@@ -103,7 +103,7 @@ public void controlEvent(ControlEvent theEvent) {
     copyPaste(theEvent.getName());
   }
   if (theEvent.getName().substring(0, 4).equals("slet")) {
-    sletData();
+    sletData(1);
   }
 }
 

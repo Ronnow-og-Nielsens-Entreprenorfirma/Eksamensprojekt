@@ -20,13 +20,16 @@ class passObj{
     rectMode(CENTER);
     textSize(20);
     fill(#989898);
-    rect(x+315, y, 50, 25);
-    rect(x+400, y, 75, 25);
-    rect(x+600, y, 75, 25);
+    rect(x+620, y-5, 50, 25);
+    rect(x+1020, y-5, 50, 25);
+    rect(x+1120, y-5, 50, 25);
     fill(255);
     text("Place: " + place, x, y);
-    text("Username: " + user, x+150, y);
-    text("Password: " + pass, x+400, y);
+    text(" | Username: " + user, x+275, y);
+    text(" | Password: " + pass, x+650, y);
+    text("copy", x+600, y);
+    text("copy", x+1000, y);
+    text("delet", x+1100, y);
     
     
   }

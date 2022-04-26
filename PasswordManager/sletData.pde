@@ -1,3 +1,3 @@
-void sletData() {
+void sletData(int i) {
   
 }
