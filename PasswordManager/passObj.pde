@@ -3,7 +3,7 @@ class passObj{
   String place;
   String user;
   String pass;
-  int x = 100;
+  int x = 50;
   float y;
   
   
@@ -17,11 +17,16 @@ class passObj{
  
   
   void show(){  
-    
-    rect(x+200, y, 200, 100);
-    rect(x+400, y, 200, 100);
-    rect(x+600, y, 200, 100);
-    text(place + " " + user + "     Copy          " + pass + "       Copy        Delete ", x, y);
+    rectMode(CENTER);
+    textSize(20);
+    fill(#989898);
+    rect(x+315, y, 50, 25);
+    rect(x+400, y, 75, 25);
+    rect(x+600, y, 75, 25);
+    fill(255);
+    text("Place: " + place, x, y);
+    text("Username: " + user, x+150, y);
+    text("Password: " + pass, x+400, y);
     
     
   }

@@ -49,7 +49,7 @@ void setup() {
   P5 = new ControlP5(this);
 
   // Diverse funktioner for elve vinduet.
-  size(800, 800);
+  size(1400, 800);
   background(30);
 
   // Starter password skærm
@@ -113,7 +113,7 @@ public void Password(String theText) {
 }
 
 void reset() {
-  background(30);
+  background(31);
   input = null;
   decoder = null;
   Input.show();
@@ -122,4 +122,6 @@ void reset() {
   Logout.hide();
   Input.setPasswordMode(true);
   Input.setLabel("");
+  userData.clear();
+  
 }
