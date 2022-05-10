@@ -99,12 +99,6 @@ public void controlEvent(ControlEvent theEvent) {
   if (theEvent.getName() == "logout") {
     reset();
   }
-  if (theEvent.getName().substring(0, 4).equals("user") || theEvent.getName().substring(0, 4).equals("pass")) {
-    copyPaste(theEvent.getName());
-  }
-  if (theEvent.getName().substring(0, 4).equals("slet")) {
-    sletData(1);
-  }
 }
 
 // Input void
@@ -123,5 +117,32 @@ void reset() {
   Input.setPasswordMode(true);
   Input.setLabel("");
   userData.clear();
-  
 }
+
+void mouseReleased() {
+  if (mouseX >= 645 && mouseX <= 695) {
+    for (int i = 0; i < userData.size(); i++) {
+      passObj data = userData.get(i);
+      if (mouseY >= data.yPos()-17.5 && mouseY <= data.yPos()+7.5) {
+        String toCopy = "user" + i;
+        copyPaste(toCopy);
+      }
+    }
+  }
+  if (mouseX >= 1070-25 && mouseX <= 1120-25) {
+    for (int i = 0; i < userData.size(); i++) {
+      passObj data = userData.get(i);
+      if (mouseY >= data.yPos()-5-12.5 && mouseY <= data.yPos()+20-12.5) {
+        String toCopy = "pass" + i;
+        copyPaste(toCopy);
+      }
+    }
+  }
+  if (mouseX >= 1170-35 && mouseX <= 1240-35) {
+    println("slet");
+    for (int i = 0; i < userData.size(); i++) {
+      passObj data = userData.get(i);
+      if (mouseY >= data.yPos()-5-12.5 && mouseY <= data.yPos()+20-12.5) sletData(i);
+      }
+    }
+  }

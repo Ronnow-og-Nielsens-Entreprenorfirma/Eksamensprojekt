@@ -35,7 +35,7 @@ void newJSONObject() {
     if (userData.size() == 0) y = 150;
     else if (userData.size() > 0) {
       passObj cord = userData.get(userData.size()-1);
-      y = cord.getYCord();
+      y = cord.yPos();
     }
     y += 50;
     userData.add(new passObj(p, u, k, y));

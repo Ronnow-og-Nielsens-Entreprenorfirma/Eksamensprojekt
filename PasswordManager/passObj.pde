@@ -22,14 +22,15 @@ class passObj{
     fill(#989898);
     rect(x+620, y-5, 50, 25);
     rect(x+1020, y-5, 50, 25);
-    rect(x+1120, y-5, 50, 25);
+    fill(200, 0, 0);
+    rect(x+1120, y-5, 70, 25);
     fill(255);
     text("Place: " + place, x, y);
     text(" | Username: " + user, x+275, y);
     text(" | Password: " + pass, x+650, y);
     text("copy", x+600, y);
     text("copy", x+1000, y);
-    text("delet", x+1100, y);
+    text("delete", x+1095, y);
     
     
   }
@@ -44,7 +45,7 @@ class passObj{
     return pass;
   }
   
-  float getYCord() {
+  float yPos() {
     
     return y;
   }
