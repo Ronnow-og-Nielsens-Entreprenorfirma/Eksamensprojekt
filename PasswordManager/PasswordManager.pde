@@ -1,21 +1,21 @@
 /*
-  Password manager, med kryptering af passwords.
+ Password manager, med kryptering af passwords.
  
  Dette program er til at opbevare og holde styr på sine passwords.
  Passwordsne bliver opbevaret i en JSON fil, hvor de er krypteret.
  
  Udviklet af Jeppe Rønnow og Kristoffer Nielsen.
- */
+*/
 
 
-// importere biblioteker til at kunne kopiere ting.
+// Importere biblioteker til at kunne kopiere ting.
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.datatransfer.*;
 import javax.swing.*;
 import java.io.*;
 
-// impotere og definere ControlP5 bibilotek
+// Impotere og definere ControlP5 bibilotek
 import controlP5.*;
 ControlP5 P5;
 
@@ -40,7 +40,6 @@ boolean boInput = false;
 float y = 200;
 String temp;
 int n = 0;
-//boolean newPass = false;
 
 void setup() {
   // Loader data fra JSON fil

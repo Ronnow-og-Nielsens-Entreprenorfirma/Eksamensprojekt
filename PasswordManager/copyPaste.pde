@@ -14,5 +14,4 @@ void copyPaste(String dataNumber) {
   Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
   clipboard.setContents(data, data);
   
-  
 }
