@@ -12,8 +12,6 @@
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.datatransfer.*;
-import javax.swing.*;
-import java.io.*;
 
 // Impotere og definere ControlP5 bibilotek
 import controlP5.*;
