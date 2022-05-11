@@ -1,4 +1,4 @@
 # Eksamensprojekt
-Eksamensprojekt i processing om Kryptering
+Eksamensprojekt i processing
 
 Af Jeppe og Kristoffer
