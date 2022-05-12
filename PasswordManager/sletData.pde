@@ -1,4 +1,4 @@
-// SletData funktion kaldes når et passwords skal slettes
+// SletData funktion kaldes når et password skal slettes
 void sletData(int n) {
   users.remove(n); // Fjerner object fra JSONArray
   saveJSONArray(users, "ytgefheu827848089urhfudj8e7234eujds/ataDssaP.json"); // Gemmer det nye JSONArray i JSON fil

@@ -1,8 +1,8 @@
-// Startfunktion kaldes når programmet starter. Det initialisere alle P% widgets
+// Startfunktion kaldes når programmet starter. Det initialiserer alle P% widgets
 void startFunktion() {
   PFont font = createFont("arial", 35); // Vælger font og størrelse
 
-  // Laver input boxen
+  // Laver input felted
   Input = P5.addTextfield("Password")
     .setPosition(width/2-100, height/2-25)
     .setColorBackground(color(50)) 
@@ -21,7 +21,7 @@ void startFunktion() {
     .setText("Enter Password")
     ;
 
-  font = createFont("arial", 15); // Vælger font og størelse
+  font = createFont("arial", 15); // Vælger font og størrelse
   // Laver nyt password knappen
   Newpass = P5.addButton("newPass")
     .setPosition(100, 100)
@@ -33,7 +33,7 @@ void startFunktion() {
     .setColorForeground(color(0, 50, 0)) 
     ;
 
-  // Laver logout knappen
+  // Laver log ud knappen
   Logout = P5.addButton("logout")
     .setPosition(width-100, 0)
     .setFont(font)

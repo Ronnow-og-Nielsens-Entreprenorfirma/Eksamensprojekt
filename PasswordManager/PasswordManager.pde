@@ -2,18 +2,17 @@
  Password manager, med kryptering af passwords.
  
  Dette program er til at opbevare og holde styr på sine passwords.
- Passwordsne bliver opbevaret i en JSON fil, hvor de er krypteret.
+ Passwordsne bliver opbevaret i en JSON-fil, hvor de er krypteret.
  
  Udviklet af Jeppe Rønnow og Kristoffer Nielsen.
  */
-
 
 // Importere biblioteker til at kunne kopiere ting.
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.datatransfer.*;
 
-// Impotere og definere ControlP5 bibilotek
+// Importere og definere ControlP5 bibliotek
 import controlP5.*;
 ControlP5 P5;
 
@@ -24,14 +23,14 @@ controlP5.Textlabel Header;
 Textlabel myLabel;
 controlP5.Button Logout;
 
-// Definere JSON object og array
+// Definere JSON objekt og array
 JSONArray users;
 JSONObject user;
 
 // Definere Arraylist userData til at skulle opbevare passObj klassen
 ArrayList<passObj> userData = new ArrayList<passObj>();
 
-// Definere og initializere diverse globale variabler
+// Definere og initialisere diverse globale variabler
 String decoder;
 String input;
 String[] inputs = new String[3];
@@ -41,7 +40,7 @@ String temp;
 int n = 0;
 
 void setup() {
-  // Loader data fra JSON fil
+  // Loader data fra JSON-fil
   users = loadJSONArray("ytgefheu827848089urhfudj8e7234eujds/ataDssaP.json");
 
   // Starter ControlP5
@@ -51,7 +50,7 @@ void setup() {
   size(1400, 800);
   background(30);
 
-  // Initializere alle controllP5 widgets
+  // Initialisere alle controllP5 widgets
   startFunktion();
 } // setup() end
 
@@ -60,8 +59,8 @@ void draw() {
   // Når man har skrevet password ind køres dette stykke kode
   if (input != null && decoder == null) {
     decoder = input; // Sæter input til at være decode koden
-    float y = 150; // Skal bruges for at kunne tægne passwords på skærmen med samme afstand
-    for (int i = 0; i < users.size(); i++) { // Går alt data i JSON filen iggenm og decoder det og ligger det i userData arraylisten
+    float y = 150; // Skal bruges for at kunne tegne passwords på skærmen med samme afstand
+    for (int i = 0; i < users.size(); i++) { // Går alt data i JSON-filen igennem og decoder det og ligger det i userData arraylisten
       y += 50;
       user = users.getJSONObject(i); // Henter data fra JSONArrayet
       // Decoder dataen
@@ -71,7 +70,7 @@ void draw() {
       userData.add(new passObj(p, u, k, y)); // Ligger den decoded data ind i userData arraylisten
     }
   }
-  // Hvis man har skrævet sit password køres dette if statement. Tegner hjem skærmen hvor man kan se sine passwords
+  // Hvis man har skrævet sit password, køres dette if statement. Tegner hjem skærmen hvor man kan se sine passwords
   if (decoder != null) {
     Input.hide();
     Header.hide();
@@ -85,7 +84,7 @@ void draw() {
 
   // Hvis man har trykket på knappen til at tilføje et nyt password
   if (boInput) {
-    newJSONObject(); // Modtager input fra brugeren, kryptere og gemmer til JSON fil
+    newJSONObject(); // Modtager input fra brugeren, kryptere og gemmer til JSON-fil
     Logout.hide();
   }
 } // draw() end
@@ -98,13 +97,13 @@ public void controlEvent(ControlEvent theEvent) {
     n = 0;
     boInput = true;
   }
-  // Hvis det er logout knappen
+  // Hvis det er log ud knappen
   if (theEvent.getName() == "logout") {
-    reset(); // Nulstiller programmet, så man skal loggeind igen
+    reset(); // Nulstiller programmet, så man skal login igen
   }
 } // controlEvent() end
 
-// Når der bliver skrevet noget i et inputfeld
+// Når der bliver skrevet noget i et inputfelt
 public void Password(String theText) {
   input = theText;
 } // Password() end
@@ -126,7 +125,7 @@ void reset() {
 // Funktion til at styre de knapper der ikke er lavet med controlP5
 // Funktionen køres når museknappen slippes
 void mouseReleased() {
-  // Hvis det er colonen med knap til at kopiere brugernavn
+  // Hvis det er kolonnen med knap til at kopiere brugernavn
   if (mouseX >= 645 && mouseX <= 695) {
     // Finder det objekt som er blevet trykket på
     for (int i = 0; i < userData.size(); i++) {
@@ -137,7 +136,7 @@ void mouseReleased() {
       }
     }
   }
-  // Hvis det er colonen med knap til at kopiere password
+  // Hvis det er kolonnen med knap til at kopiere password
   if (mouseX >= 1070-25 && mouseX <= 1120-25) {
     // Finder det objekt der er blevet trykket på
     for (int i = 0; i < userData.size(); i++) {
@@ -148,7 +147,7 @@ void mouseReleased() {
       }
     }
   }
-  // Hvis det er colonen med knappen til at slete data
+  // Hvis det er kolonnen med knappen til at slette data
   if (mouseX >= 1170-35 && mouseX <= 1240-35) {
     // Finder det objekt der er blevet trykket på
     for (int i = 0; i < userData.size(); i++) {

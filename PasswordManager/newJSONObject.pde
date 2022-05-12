@@ -10,13 +10,13 @@ void newJSONObject() {
   Header.setText(inputNames[n]);
   Header.setPosition(width/2-175, height/10);
 
-  // Tjekker om inputet er nyt inden den gemmer det
+  // Tjekker om inputtet er nyt inden den gemmer det
   if (input != temp) {
-    inputs[n] = input; // Hvis det er nyt gememr den det
+    inputs[n] = input; // Hvis det er nyt, gemmer den det
     n++;
     input = temp; // Opdatere havd det seneste input er
     if (n < 3) {
-      Header.setText(inputNames[n]); // Skifter navn på inputbox
+      Header.setText(inputNames[n]); // Skifter navn på inputfelt
     }
   }
 

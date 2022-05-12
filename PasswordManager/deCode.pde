@@ -8,17 +8,17 @@ String deCode(String decode) {
   int g = 0;
   // Dekryptere hver enkelte byte
   for (int i = 0; i < data.length; i++) {
-    int temp = data[i] & 0xff; // Fjerner most significant bit, så vi har 0 - 256 istedet for -127 - 128
+    int temp = data[i] & 0xff; // Fjerner most signifikant bit, så vi har 0 - 256 i stedet for -127 - 128
     temp = temp - (int)decoder.charAt(g); // skifter byte værdien
     data[i] = (byte)temp; // Gemmer det nye byte
     g++;
     if (g == decoder.length()) g = 0;
   }
   decode = "";
-  // Ligger de dekryptered bytes ned i en string som chars
+  // Ligger de dekrypterede bytes ned i en string som chars
   for (int i = 0; i < data.length; i++) {
     decode = decode + (char)data[i];
   }
 
-  return decode; // Retunere den dekryptered string
+  return decode; // Returnere den dekrypterede string
 } // deCode() end
