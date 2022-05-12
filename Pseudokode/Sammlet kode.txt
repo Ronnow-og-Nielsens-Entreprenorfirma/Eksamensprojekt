@@ -128,7 +128,11 @@ kodeord objekt{
 
     Tegner passwords oversigt skærmen
 
-    idk
+    tager brugernavns data og returner den
+
+    tager kodeords data og returner den
+
+    tager y positions data og returner den
 }
 
 funktion der sletter gemte kodeord{
