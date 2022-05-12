@@ -1,0 +1,14 @@
+Opret nyt kodeord funktion{
+    tegner input skærm til nyt kodeord
+
+    hvis alle infomation er modtaget{
+        krypter de nye infomation
+
+        smid den krypteret data i JSONObjektet
+        gem den nye JSON-fil
+
+        husk den nye data i arraylisten
+
+        tegn kodeord oversigt skærmen
+    }
+}

@@ -1,0 +1,154 @@
+Importer nødvendige biblioteker
+
+Definere globale variabler
+
+Setup kode køre en gang når programmet Starter{
+    Loader JSON fil.
+    
+    Initialisere controlP5 bibliotek
+
+    Set størrelse af vinduet og baggrunds farve
+
+    køre startFunktion
+}
+
+Draw kode er et loop der kører hele tiden{
+    hvis kodeordet er tastet ind{
+        husk indtastet kodeord
+        loop der gentager efter hvor mange kodeord der er gemt{
+            hent data fra JSON fil
+            dekryptere data
+            gem dekryptere data
+        }
+    }
+    hvis kodeordet er tastet ind{
+        Tegn oversigt af kodeord ved at køre drawPass Funktionen
+    }
+    hvis man trykker på knappen for at tilføje et nyt password{
+        Modtag infomation fra brugeren og gem det i JSON-filen
+    }
+}
+
+Hvis der bilver trykket på en knap fra controlP5{
+    hvis man trykker på knappen for at tilføje et nyt password{
+        kalder opret nyt kodeord funktion
+    }
+    hvis man trykker på logud knappen{
+        køre nulstil funktion
+    }
+}
+
+Hvis der der bliver skrevet noget i tekstfeltet{
+    modtag input og husk input
+}
+
+nulstil funktion køre hvis logud knap er trykket{
+    nulstil input variabler
+    tegn start siden
+    tøm dekryptere data
+}
+
+Hvis der bilver trykket på en knap sopm ikke er fra controlP5{
+    hvis knappen copy er ved brugernavnet{
+        kald kopiering til udklipsholderen Funktionen
+        og kopier brugernavnet
+    }
+    hvis knappen er ved kodeordet{
+        kald kopiering til udklipsholderen Funktionen
+        og kopier kodeord
+    }
+    hvis der trykkes på delete knappen{
+        kald funktion der sletter gemte kodeord
+    }
+}
+
+startFunktion kaldes når programmet starter{
+
+    generere text felt
+
+    generere tekst header
+
+    generere ny kodeord knap
+
+    generere logud knap
+}
+
+krypterings funktion{
+    split data fra string til char og gem i et array i form af bytes
+
+    tag hver enkle byte og krypter dem{
+        fjern most signifikant bit så, så vi har 0 - 256 i stedet for -127
+        ændre byte værdien
+        gem det nye byte
+    }
+
+    sammler bytes til en string af chars
+
+    Returnere krypteret string
+}
+
+dekrypterings kode{
+    split data fra string til char og gem i et array i form af bytes
+
+    tag hver enkle byte og dekrypter dem{
+        fjern most signifikant bit så, så vi har 0 - 256 i stedet for -127
+        ændre byte værdien
+        gem det nye byte
+    }
+
+    sammler bytes til en string af chars
+
+    Returnere dekrypteret string
+}
+
+Opret nyt kodeord funktion{
+    tegner input skærm til nyt kodeord
+
+    hvis alle infomation er modtaget{
+        krypter de nye infomation
+
+        smid den krypteret data i JSONObjektet
+        gem den nye JSON-fil
+
+        husk den nye data i arraylisten
+
+        tegn kodeord oversigt skærmen
+    }
+}
+
+funktion der tegner oversigt for passwordsne{
+    loop der kigger alle dekrypterede infomationer igennem{
+        tegner dekrypterede infomationer
+    }
+}
+
+kodeord objekt{
+
+    Håndtere data når et nyt objekt/kodeord bliver lavet
+
+    Tegner passwords oversigt skærmen
+
+    idk
+}
+
+funktion der sletter gemte kodeord{
+    fjern objektet fra JSON-filen
+    gem nye JSON-fil
+    tøm dekryptere data
+    dekryptere data fra nye gemt JSON-fil
+}
+
+kopiering til udklipsholderen funktion{
+    opdel input string
+
+    hvis brugernavnet skal kopieres{
+        hent brugernavn der skal kopieres
+        husk brugernavnet
+    }
+    hvis password skal kopieres{
+        hent kodeord der skal kopieres
+        husk kodeordet
+    }
+
+    tager det husket brugeren/kodeord og gemmer det på udklipsholderen
+}

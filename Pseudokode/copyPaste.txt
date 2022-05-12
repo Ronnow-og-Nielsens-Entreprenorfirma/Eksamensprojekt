@@ -1,0 +1,14 @@
+kopiering til udklipsholderen funktion{
+    opdel input string
+
+    hvis brugernavnet skal kopieres{
+        hent brugernavn der skal kopieres
+        husk brugernavnet
+    }
+    hvis password skal kopieres{
+        hent kodeord der skal kopieres
+        husk kodeordet
+    }
+
+    tager det husket brugeren/kodeord og gemmer det på udklipsholderen
+}

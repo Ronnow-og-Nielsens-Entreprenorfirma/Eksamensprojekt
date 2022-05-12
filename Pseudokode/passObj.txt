@@ -1,0 +1,8 @@
+kodeord objekt{
+
+    Håndtere data når et nyt objekt/kodeord bliver lavet
+
+    Tegner passwords oversigt skærmen
+
+    idk
+}

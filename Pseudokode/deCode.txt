@@ -1,0 +1,13 @@
+dekrypterings kode{
+    split data fra string til char og gem i et array i form af bytes
+
+    tag hver enkle byte og dekrypter dem{
+        fjern most signifikant bit så, så vi har 0 - 256 i stedet for -127
+        ændre byte værdien
+        gem det nye byte
+    }
+
+    sammler bytes til en string af chars
+
+    Returnere dekrypteret string
+}

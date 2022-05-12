@@ -1,0 +1,10 @@
+startFunktion kaldes når programmet starter{
+
+    generere text felt
+
+    generere tekst header
+
+    generere ny kodeord knap
+
+    generere logud knap
+}

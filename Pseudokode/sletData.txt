@@ -1,0 +1,6 @@
+funktion der sletter gemte kodeord{
+    fjern objektet fra JSON-filen
+    gem nye JSON-fil
+    tøm dekryptere data
+    dekryptere data fra nye gemt JSON-fil
+}
