@@ -1,4 +1,4 @@
-// Startfunktion kaldes når programmet starter. Det initialiserer alle P% widgets
+// Startfunktion kaldes når programmet starter. Det initialiserer alle P5 widgets
 void startFunktion() {
   PFont font = createFont("arial", 35); // Vælger font og størrelse
 
